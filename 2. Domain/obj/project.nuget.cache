@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "h8tTJ1JUkt66C1t0R+HoeqqHRQE2uXbLnMt/4ixkYlBxafH+lWII2KJUjazMdOBeGCbimSF/Kidu2XXsxpK4mA==",
+  "success": true,
+  "projectFilePath": "/Users/lordmathi2741/Documents/Cursos/Aplicaciones Web-Upc/C#/DiscountApi/2. Domain/2. Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/lordmathi2741/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/lordmathi2741/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
