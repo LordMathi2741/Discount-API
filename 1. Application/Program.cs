@@ -10,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IProductFactory, BookProduct>();
+builder.Services.AddScoped<IMemberShipFactory,MemberShipGold>();
 
 var app = builder.Build();
 

@@ -11,7 +11,10 @@ namespace Infraestructure
 
         public List<Membership> GetAll()
         {
-            throw new NotImplementedException();
+            var memberShips = new List<Membership>();
+            memberShips.Add(new Membership { Id = 1, FirstName="Mathi", LastName="Jave", Type = "Gold" });
+            memberShips.Add(new Membership { Id = 2, FirstName="Gustavo", LastName="Huilca", Type = "Gold" });
+            return memberShips;
         }
 
         public bool Update(Membership memberShip, int id)

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Infraestructure;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,11 +12,17 @@ namespace _1._Application.Controllers
     [ApiController]
     public class MemberShipController : ControllerBase
     {
+        private IMemberShipFactory _memberShip;
+        public MemberShipController(IMemberShipFactory memberShip)
+        {
+            _memberShip = memberShip;
+            
+        }
         // GET: api/MemberShip
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return _memberShip.GetAll().Select(x => x.Type).ToList();
         }
         
 
