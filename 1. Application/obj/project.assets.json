@@ -3349,6 +3349,19 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "2. Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Infraestructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/2. Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/2. Domain.dll": {}
+        }
+      },
       "Infraestructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -10118,6 +10131,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "2. Domain/1.0.0": {
+      "type": "project",
+      "path": "../2. Domain/2. Domain.csproj",
+      "msbuildProject": "../2. Domain/2. Domain.csproj"
+    },
     "Infraestructure/1.0.0": {
       "type": "project",
       "path": "../Infraestructure/Infraestructure.csproj",
@@ -10126,6 +10144,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "2. Domain >= 1.0.0",
       "Infraestructure >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 7.0.12",
@@ -10157,6 +10176,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "/Users/lordmathi2741/Documents/Cursos/Aplicaciones Web-Upc/C#/DiscountApi/2. Domain/2. Domain.csproj": {
+              "projectPath": "/Users/lordmathi2741/Documents/Cursos/Aplicaciones Web-Upc/C#/DiscountApi/2. Domain/2. Domain.csproj"
+            },
             "/Users/lordmathi2741/Documents/Cursos/Aplicaciones Web-Upc/C#/DiscountApi/Infraestructure/Infraestructure.csproj": {
               "projectPath": "/Users/lordmathi2741/Documents/Cursos/Aplicaciones Web-Upc/C#/DiscountApi/Infraestructure/Infraestructure.csproj"
             }

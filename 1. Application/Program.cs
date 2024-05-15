@@ -1,3 +1,4 @@
+using _2._Domain;
 using Infraestructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IProductFactory, BookProduct>();
 builder.Services.AddScoped<IMemberShipFactory,MemberShipGold>();
+builder.Services.AddScoped<IDiscountDomain,DiscountDomain>();
 
 var app = builder.Build();
 
