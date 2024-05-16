@@ -22,18 +22,18 @@ public class DiscountDomain : IDiscountDomain
 
     public void ApplyDiscount(Product product, Membership membership)
     {
-        double initialPrice = product.Price;
-        double discount = 0.0;
+        var initialPrice = product.Price;
+        var discount = 0.0;
         if (CheckDiscount(product, membership))
         {
             if (membership.Type.ToLower() == "gold")
             {
-                discount = discount + 0.2;
+                discount += 0.2;
             }
             
             else if (product.Type == "electronic" & product.Price > 1000)
             {
-                discount = discount + 0.1;
+                discount += 0.1;
             }
             
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Infraestructure;
+using Infraestructure.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,7 @@ namespace _1._Application.Controllers
     public class ProductController : ControllerBase
     {
         private IProductFactory _productType;
+        private static List<Product> _info = new List<Product>();
         public ProductController(IProductFactory productType)
         {
             _productType = productType;
@@ -22,13 +24,14 @@ namespace _1._Application.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return _productType.GetAll().Select(x => x.Type).ToList();
+            return _productType.GetAll(_info).Select(x => x.Type).ToList();
         }
 
         // POST: api/Product
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Product product)
         {
+            _productType.Save(product, _info);
         }
 
         // PUT: api/Product/5

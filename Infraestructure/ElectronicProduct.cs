@@ -4,14 +4,18 @@ namespace Infraestructure
 {
     public class ElectronicProduct : IProductFactory
     {
-        public bool Save(Product product)
+        public bool Save(Product product, List<Product> products)
         {
-            throw new NotImplementedException();
+            if (product.Type.ToLower() == "electronic")
+            {
+                products.Add(product);
+            }
+            return true;
         }
 
-        public List<Product> GetAll()
+        public List<Product> GetAll(List<Product> products)
         {
-            throw new NotImplementedException();
+            return products;
         }
 
         public bool Update(Product product, int id)
